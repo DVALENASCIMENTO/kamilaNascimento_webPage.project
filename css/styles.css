@@ -1,0 +1,134 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4da6a8;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #3b8688;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0f4f8;
+}
+
+#hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #4da6a8, #82c6c9);
+    color: #fff;
+    animation: fadeIn 2s ease-in;
+    margin-top: 60px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#services {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.service {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#loadMore {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #4da6a8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loadMore:hover {
+    background-color: #3b8688;
+}
+
+footer {
+    background-color: #4da6a8;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.contact-options a {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    background-color: #25d366;
+    transition: background-color 0.3s ease;
+}
+
+.contact-options a:hover {
+    background-color: #1ebd56;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
